@@ -8,12 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
         
-        // إغلاق القائمة عند النقر على رابط
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
+      document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // بدون منع الرابط
+    });
+});
+document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // بدون منع الرابط
+    });
+});
+
     }
     
     // العد التنازلي للانتخابات
