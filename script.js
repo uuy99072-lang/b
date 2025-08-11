@@ -8,11 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
         
-    document.querySelectorAll('.btn-primary').forEach(btn => {
-    btn.addEventListener('click', function() {
-        // بدون منع الرابط
-      });
-   });
+document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        if (this.textContent.includes('انضم للحملة')) {
+            e.preventDefault();
+            window.location.href = "https://chat.whatsapp.com/IrmSxDBlIsWFzx5ujn8GZx"; 
+            // استبدل الرابط بالرابط الفعلي
+        }
+    });
+});
+
 
     }
     
@@ -136,28 +141,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // تحديث نموذج Google Forms
-    const googleFormContainer = document.querySelector('.google-form-container');
-    if (googleFormContainer) {
-        googleFormContainer.innerHTML = `
-            <div style="padding: 2rem; text-align: center; color: #2d5a27;">
-                <h4>نموذج التواصل</h4>
-                <p>يرجى استبدال هذا النص برابط Google Forms الخاص بك</p>
-                <p style="font-size: 0.9rem; margin-top: 1rem;">
-                    لإضافة نموذج Google Forms:
-                    <br>1. أنشئ نموذجاً في Google Forms
-                    <br>2. انقر على "إرسال" ثم اختر رمز "&lt;&gt;"
-                    <br>3. انسخ الكود واستبدل محتوى iframe أعلاه
-                </p>
-                <div style="margin-top: 2rem;">
-                    <button onclick="alert('https://forms.gle/i37BpdwbE4Kr8p7E8')" 
-                            style="background: #2d5a27; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-                        نموذج مؤقت للتواصل
-                    </button>
-                </div>
-            </div>
-        `;
-    }
+// إضافة رابط نموذج التواصل مباشرة
+const googleFormContainer = document.querySelector('.google-form-container');
+if (googleFormContainer) {
+    googleFormContainer.innerHTML = `
+        <iframe 
+            src="https://forms.gle/i37BpdwbE4Kr8p7E8" 
+            width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
+            يتم تحميل النموذج...
+        </iframe>
+    `;
+}
+
     
     // إضافة تأثيرات بصرية للبطاقات
     document.querySelectorAll('.biography-card, .program-card, .news-card, .testimonial-card').forEach(card => {
