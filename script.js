@@ -8,22 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
         
-      document.querySelectorAll('.btn-primary').forEach(btn => {
+    document.querySelectorAll('.btn-primary').forEach(btn => {
     btn.addEventListener('click', function() {
         // بدون منع الرابط
-    });
-});
-document.querySelectorAll('.btn-primary').forEach(btn => {
-    btn.addEventListener('click', function() {
-        // بدون منع الرابط
-    });
-});
+      });
+   });
 
     }
     
     // العد التنازلي للانتخابات
     function updateCountdown() {
-        // تاريخ الانتخابات (15 مايو 2025)
+        // تاريخ الانتخابات (11 نوفمبر 2025)
         const electionDate = new Date('2025-11-11T00:00:00').getTime();
         const now = new Date().getTime();
         const distance = electionDate - now;
@@ -155,7 +150,7 @@ document.querySelectorAll('.btn-primary').forEach(btn => {
                     <br>3. انسخ الكود واستبدل محتوى iframe أعلاه
                 </p>
                 <div style="margin-top: 2rem;">
-                    <button onclick="alert('يرجى إضافة رابط Google Forms الخاص بك')" 
+                    <button onclick="alert('https://forms.gle/i37BpdwbE4Kr8p7E8')" 
                             style="background: #2d5a27; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
                         نموذج مؤقت للتواصل
                     </button>
